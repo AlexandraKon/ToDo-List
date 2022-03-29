@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="/logo.24c3fa21.png" type="image/png">
+    <link rel="stylesheet" href="/index.008b0dfe.css">
+    <link rel="stylesheet" href="/index.7401ed53.css">
+    <title>ToDo List</title>
+	</head>
+	<body>
+		<header>
+			<nav class="navigation">
+                <div class="nav__logo"><img class="logo__image" src="/logo.24c3fa21.png" alt="ToDo Logo"></div>
+                <ul class="nav__list">
+                    <!--<li class="nav__item">Calculator</li>
+                    <li class="nav__item">Time</li>
+                    <li class="nav__item">Calendario</li>
+                    <li class="nav__item">About project</li>-->
+                </ul>
+                <button class="burgermenu">
+                    <span tytle="Open"></span>
+                </button>
+            </nav>
+		</header>
+		<main class="container__main">
+			<section class="todo__container">
+				<h1 class="todo__title">TO DO LIST</h1>
+				<div class="add__task">
+					<input id="newTodo" class="new__todo" type="text" autocomplete="off" placeholder="Add New Task">
+					<input class="submit__task" id="btnAdd" type="submit" value="" title="Add Task">
+				</div>
+				<ul class="filters">
+					<li class="filters__list">
+						<input id="toggleInputAll" class="mark__all" type="checkbox" title="Mark all as complete">
+					</li>
+					<li class="filters__list">
+					  <a class="selected" id="allWorks" onclick="changeClass(this)" href="#/">All</a>
+					</li>
+					<li class="filters__list">
+					  <a href="#active" id="activedItems" onclick="changeClass(this)">Active</a>
+					</li>
+					<li class="filters__list">
+					  <a href="#completed" id="completedTodos" onclick="changeClass(this)">Completed</a>
+					</li>
+				  </ul>
+				<section id="cuerpoTodo">
+					<ul id="todoListView" class="todo__list"></ul>
+				</section>
+				<section class="last__secction">
+					<span class="todo__count"><strong id="todoCount">0</strong> task left</span>
+					<button class="clear__completed" id="btnClear">Clear completed</button>
+				</section>
+			</section>
+		</main>
+		<footer class="footer">
+			<p>TO DO LIST by Alexandra</p>
+        	<p>2022</p>
+            <ul class="footer__social">
+				<li class="links__list"><a href="https://www.instagram.com/alexandra.knn/" target="_blank"><img class="logo__link" src="/inst.7994adbb.png"></a></li>
+				<li class="links__list"><a href="https://github.com/alexandrakononenko" target="_blank"><img class="logo__link" src="/github.aaeac34e.png"></a></li>
+				<li class="links__list"><a href="https://www.linkedin.com/in/alexandra-kononenko-259810219" target="_blank"><img class="logo__link" src="/linkedin.cb506126.png"></a></li>
+			</ul>
+		</footer>
+		<script src="/index.de5c0784.js"></script>
+	</body>
+</html>
