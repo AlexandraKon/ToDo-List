@@ -1,1 +1,10 @@
-# To Do List
+# ToDo List
+
+*ToDo List* is a list of tasks you need to complete or things that you want to do
+
+### Link to access:
+https://alexandra-todolist.netlify.app/
+
+### Technologies used:
+
+HTML, CSS and JavaScript
