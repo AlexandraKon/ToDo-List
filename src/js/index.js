@@ -52,8 +52,8 @@
       return lastId;
     },
   
-    addNewTodo: function (todo, list) {
-      list.push(todo);
+    addNewTodo: function (todo, list, time) {
+      list.push(todo, time);
       todoController.setTodoLocalstorage(list);
       return todo;
     },
@@ -210,7 +210,11 @@
           
           let todoList = todoController.getTodoFromLocalstorage('todoList');
           let todoItem = todoController.handleTodoItem(todoController.todoInput.value);
-          let todo = todoController.addNewTodo(todoItem, todoList);
+          let date = new Date();
+          let taskDate = date.toLocaleString();
+          let time = document.createTextNode(" " + taskDate);
+
+          let todo = todoController.addNewTodo(todoItem, todoList, time);
           todoController.todoView(todo);
   
           todoController.todoInput.value = '';
@@ -223,6 +227,7 @@
       addButton.addEventListener('click', function() {
          let todoList = todoController.getTodoFromLocalstorage('todoList');
          let todoItem = todoController.handleTodoItem(todoController.todoInput.value);
+         
          let todo = todoController.addNewTodo(todoItem, todoList);
          todoController.todoView(todo);
   

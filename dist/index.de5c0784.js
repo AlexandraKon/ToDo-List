@@ -39,8 +39,8 @@ TodoController.prototype = {
         else return 0;
         return lastId;
     },
-    addNewTodo: function(todo1, list) {
-        list.push(todo1);
+    addNewTodo: function(todo1, list, time) {
+        list.push(todo1, time);
         todoController.setTodoLocalstorage(list);
         return todo1;
     },
@@ -158,7 +158,10 @@ TodoController.prototype = {
             if (event.which == todoController.ENTER_KEY || event.keyCode == todoController.ENTER_KEY) {
                 let todoList = todoController.getTodoFromLocalstorage('todoList');
                 let todoItem = todoController.handleTodoItem(todoController.todoInput.value);
-                let todo7 = todoController.addNewTodo(todoItem, todoList);
+                let date = new Date();
+                let taskDate = date.toLocaleString();
+                let time = document.createTextNode(" " + taskDate);
+                let todo7 = todoController.addNewTodo(todoItem, todoList, time);
                 todoController.todoView(todo7);
                 todoController.todoInput.value = '';
                 todoController.countItem();
